@@ -1,25 +1,41 @@
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 const HeaderMenu = () => {
-    return (
+
+  const router = useRouter();
+
+  return (
         <>
             <Link href={'/'}>
-                <a className="head-title">Home</a>
+                <a className={router.pathname == "/" ? "active head-title" : "head-title"}>
+                  Home
+                </a>
             </Link>
             <Link href={'/about'}>
-                <a className="head-title">About</a>
+                <a className={router.pathname == "/about" ? "active head-title home" : "head-title"}>
+                  About
+                </a>
             </Link>
             <Link href={'/application'}>
-                <a className="head-title">Application</a>
+                <a className={router.pathname == "/application" ? "active head-title" : "head-title"}>
+                  Application
+                </a>
             </Link>
             <Link href={'/learning'}>
-                <a className="head-title">Learning</a>
+                <a className={router.pathname == "/learning" ? "active head-title" : "head-title"}>
+                  Learning
+                </a>
             </Link>
             <Link href={'/product'}>
-                <a className="head-title">Product</a>
+                <a className={router.pathname == "/product" ? "active head-title" : "head-title"}>
+                  Product
+                </a>
             </Link>
             <Link href={'/support'}>
-                <a className="head-title">Support</a>
+                <a className={router.pathname == "/support" ? "active head-title support" : "head-title"}>
+                  Support
+                </a>
             </Link>
         </>
     );

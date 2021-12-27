@@ -1,16 +1,18 @@
-import Link from 'next/link'
 import Head from "next/head";
+import Image from 'next/image';
+import Link from 'next/link'
+import HeaderMenu from "../header-menu/HeaderMenu";
 import {MenuOutlined} from "@ant-design/icons";
 import {Dropdown, Menu} from "antd";
-import HeaderMenu from "../header-menu/HeaderMenu";
 
-// @ts-ignore
-export default function MainLayout({children, title = 'GVESS'}) {
+export default function MainLayout({children, title = 'GVESS'}: any) {
+
     const menu = (
         <Menu>
             <HeaderMenu />
         </Menu>
     );
+
     return (
         <>
             <Head>
@@ -21,7 +23,16 @@ export default function MainLayout({children, title = 'GVESS'}) {
             </Head>
             <nav>
                 <div className="logo">
-                    Logo
+                  <Link href={'/'}>
+                    <a>
+                      <Image
+                        src="/logo.png"
+                        alt="Logo"
+                        height={32}
+                        width={32}
+                      />
+                    </a>
+                  </Link>
                 </div>
                 <header>
                     <HeaderMenu />
