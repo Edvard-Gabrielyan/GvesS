@@ -25,7 +25,7 @@ export default function MainLayout({children, title = 'GVESS'}: any) {
         <meta name="keywords" content="HTML, CSS, JavaScript????????????" />
         <meta name="og:title" property="og:title" content="????" />
         <meta name="robots" content="noindex, nofollow????" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0???????" />
+        {/*<meta name="viewport" content="width=device-width, initial-scale=1.0???????" />*/}
         <title>{title}</title>
       </Head>
       <nav>
