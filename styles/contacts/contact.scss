@@ -1,16 +1,83 @@
 .contacts-body {
   height: 100%;
   display: flex;
-  background: red;
-  .contact-us {
-    width: 50%;
-    background: green;
-  }
-  .map {
+  background: #F2EDE6;
+
+  .contact-info {
     width: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    margin: 0 32px 32px 0;
+
+    .header {
+      width: 100%;
+      font-size: 54px;
+    }
+
+    .ant-form {
+      border-top: 3px solid #000;
+      border-left: 3px solid #000;
+      padding: 16px 32px;
+
+      .ant-input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000;
+        box-shadow: none;
+        margin-top: 16px;
+      }
+
+      .textarea {
+        height: 32px;
+        resize: none;
+        box-shadow: none;
+      }
+
+      .error-messages {
+        color: #FF0000;
+      }
+
+      .btn-submit {
+        height: 36px;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        font-size: 18px;
+        background: #000;
+        border-radius: 10px;
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contacts-body {
+    display: flex;
+    flex-direction: column;
+    .contact-info {
+      margin: 16px auto;
+      //width: 100%;
+    }
+    .contact-form {
+      width: 100%;
+      .header {
+        padding-left: 32px;
+        margin: 0;
+      }
+      .ant-form {
+        border: none;
+      }
+    }
   }
 }
