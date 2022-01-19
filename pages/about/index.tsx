@@ -5,5 +5,5 @@ export default function About() {
     <MainLayout title="About page">
       <h1>About 2121212121212121</h1>
     </MainLayout>
-  )
+  );
 }

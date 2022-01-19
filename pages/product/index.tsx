@@ -5,5 +5,5 @@ export default function Product() {
     <MainLayout title="Product page">
       <h1>Product</h1>
     </MainLayout>
-  )
+  );
 }

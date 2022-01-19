@@ -5,5 +5,5 @@ export default function Learning() {
     <MainLayout title="Learning page">
       <h1>Learning</h1>
     </MainLayout>
-  )
+  );
 }

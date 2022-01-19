@@ -5,5 +5,5 @@ export default function Application() {
     <MainLayout title="Application page">
       <h1>Application</h1>
     </MainLayout>
-  )
+  );
 }
