@@ -1,9 +1,13 @@
-import MainLayout from "../../components/main-layout/MainLayout";
+import React, { FC } from "react";
+import Layout from "../../components/Layout/Layout";
+import Application from "../../components/Application/Application";
 
-export default function Application() {
+const Index: FC = () => {
   return (
-    <MainLayout title="Application page">
-      <h1>Application</h1>
-    </MainLayout>
+    <Layout title="Application page">
+      <Application />
+    </Layout>
   );
-}
+};
+
+export default Index;

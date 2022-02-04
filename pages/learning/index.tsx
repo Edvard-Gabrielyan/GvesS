@@ -1,9 +1,13 @@
-import MainLayout from "../../components/main-layout/MainLayout";
+import React, { FC } from "react";
+import Layout from "../../components/Layout/Layout";
+import Learning from "../../components/Learning/Learning";
 
-export default function Learning() {
+const Index: FC = () => {
   return (
-    <MainLayout title="Learning page">
-      <h1>Learning</h1>
-    </MainLayout>
+    <Layout title="Learning page">
+      <Learning />
+    </Layout>
   );
-}
+};
+
+export default Index;

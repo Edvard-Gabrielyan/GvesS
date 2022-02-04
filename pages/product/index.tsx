@@ -1,9 +1,13 @@
-import MainLayout from "../../components/main-layout/MainLayout";
+import React, { FC } from "react";
+import Layout from "../../components/Layout/Layout";
+import Product from "../../components/Product/Product";
 
-export default function Product() {
+const Index: FC = () => {
   return (
-    <MainLayout title="Product page">
-      <h1>Product</h1>
-    </MainLayout>
+    <Layout title="Product page">
+      <Product />
+    </Layout>
   );
-}
+};
+
+export default Index;

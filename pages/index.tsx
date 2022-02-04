@@ -1,22 +1,16 @@
-import { Carousel } from "antd";
-import MainLayout from "../components/main-layout/MainLayout";
-import useHome from "../services/useHome";
+import React, { FC } from "react";
+import Layout from "../components/Layout/Layout";
+import Home from "../components/Home/Home";
+import useHome from "../services/home";
 
-export default function Home() {
+const Index: FC = () => {
   const { data } = useHome();
   console.log(data);
   return (
-    <MainLayout>
-      <div className="home-page">
-        <div className="home-carousel">
-          <Carousel autoplay effect="fade">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-          </Carousel>
-        </div>
-      </div>
-    </MainLayout>
+    <Layout>
+      <Home />
+    </Layout>
   );
-}
+};
+
+export default Index;

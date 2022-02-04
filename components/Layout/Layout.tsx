@@ -1,19 +1,21 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { MenuOutlined } from "@ant-design/icons";
 import { Dropdown, Menu } from "antd";
-import HeaderMenu from "../header-menu/HeaderMenu";
+import { MenuOutlined } from "@ant-design/icons";
+import Header from "../Header/Header";
+import s from "./Layout.module.scss";
 
-export default function MainLayout({ children, title = "GvesS" }: any) {
+export default function Layout({ children, title = "GvesS" }: any) {
   const menu = (
     <Menu>
-      <HeaderMenu />
+      <Header />
     </Menu>
   );
 
   return (
-    <>
+    <div className={s.rootContainer}>
       <Head>
         <meta charSet="utf-8" />
         <meta name="author" content="Edvard Gabrielyan" />
@@ -28,7 +30,7 @@ export default function MainLayout({ children, title = "GvesS" }: any) {
         <title>{title}</title>
       </Head>
       <nav>
-        <div className="logo">
+        <div className={s.logo}>
           <Link href={"/"}>
             <a>
               <Image src="/logo.png" alt="Logo" height={32} width={32} />
@@ -36,14 +38,11 @@ export default function MainLayout({ children, title = "GvesS" }: any) {
           </Link>
         </div>
         <header>
-          <HeaderMenu />
+          <Header />
         </header>
-        <div className="menu-icon">
+        <div className={s.icon}>
           <Dropdown overlay={menu} trigger={["click"]}>
-            <a
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-            >
+            <a className={s.dropdown} onClick={(e) => e.preventDefault()}>
               <MenuOutlined />
             </a>
           </Dropdown>
@@ -51,6 +50,6 @@ export default function MainLayout({ children, title = "GvesS" }: any) {
       </nav>
       <main>{children}</main>
       <footer>Footer</footer>
-    </>
+    </div>
   );
 }

@@ -1,16 +1,16 @@
-.contacts-page {
+.contactContainer {
   height: 100%;
   display: flex;
   background: #F2EDE6;
 
-  .contact-info {
+  .contactInfo {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .contact-form {
+  .contactForm {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -22,12 +22,12 @@
       font-size: 54px;
     }
 
-    .ant-form {
+    .form {
       border-top: 3px solid #000;
       border-left: 3px solid #000;
       padding: 16px 32px;
 
-      .ant-input {
+      .input {
         background: transparent;
         border: none;
         border-bottom: 1px solid #000;
@@ -38,14 +38,13 @@
       .textarea {
         height: 32px;
         resize: none;
-        box-shadow: none;
       }
 
-      .error-messages {
+      .errorMessages {
         color: #FF0000;
       }
 
-      .btn-submit {
+      .submit {
         height: 36px;
         width: 150px;
         display: flex;
@@ -62,20 +61,23 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .contacts-body {
+  .contactContainer {
     display: flex;
     flex-direction: column;
-    .contact-info {
+
+    .contactInfo {
       margin: 16px auto;
-      //width: 100%;
     }
-    .contact-form {
+
+    .contactForm {
       width: 100%;
+
       .header {
         padding-left: 32px;
         margin: 0;
       }
-      .ant-form {
+
+      .form {
         border: none;
       }
     }

@@ -1,9 +1,13 @@
-import MainLayout from "../../components/main-layout/MainLayout";
+import React from "react";
+import Layout from "../../components/Layout/Layout";
+import About from "../../components/About/About";
 
-export default function About() {
+const Index = () => {
   return (
-    <MainLayout title="About page">
-      <h1>About 2121212121212121</h1>
-    </MainLayout>
+    <Layout title="About page">
+      <About />
+    </Layout>
   );
-}
+};
+
+export default Index;
