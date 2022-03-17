@@ -60,7 +60,7 @@ const useFormikController = (props: IPropsFormikController) => {
         props: { id, control, label, ...rest },
       },
     }),
-    [type]
+    [type, props]
   );
   return {
     type,
