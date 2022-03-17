@@ -1,34 +1,35 @@
 .headerContainer {
+  height: 70px;
+  width: 100%;
+  max-width: 1440px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.desktopHeader {
   display: flex;
 }
 
-.title {
-  display: block;
-  padding: 4px 8px;
+.mobileHeader {
+  display: none;
+  div[class*="icon"] {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
 }
 
-.title:hover {
-  color: #FFF;
-  background: #0000FF;
-  border-radius: 5px;
-}
-
-.active {
-  color: #FFF;
-  background: #0000FF;
-  border-radius: 5px;
-}
-
-@media all and (max-width: 576px) {
-  .headerContainer {
-    display: block;
-    .title {
-      width: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      margin-bottom: 8px;
-    }
+@media only screen and (max-width: 860px) {
+  .desktopHeader {
+    display: none;
+  }
+  .mobileHeader {
+    display: flex;
   }
 }

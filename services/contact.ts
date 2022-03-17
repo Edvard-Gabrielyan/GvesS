@@ -1,21 +1,9 @@
 import * as Yup from "yup";
+import { useFormik } from "formik";
 
 export default function useContact() {
-  interface FormValues {
-    fullName: string;
-    phone: string | number;
-    email: string | number;
-    messages: string | number;
-  }
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
-  const initialValues: FormValues = {
-    fullName: "",
-    phone: "",
-    email: "",
-    messages: "",
-  };
 
   const validationSchema = Yup.object({
     fullName: Yup.string()
@@ -28,8 +16,21 @@ export default function useContact() {
     messages: Yup.string().required("Required"),
   });
 
-  return {
-    initialValues,
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      phone: "",
+      email: "",
+      messages: "",
+    },
+    enableReinitialize: true,
+    onSubmit: (values) => {
+      console.log(values);
+    },
     validationSchema,
-  };
+    validateOnBlur: true,
+    validateOnChange: false,
+  });
+
+  return { formik };
 }

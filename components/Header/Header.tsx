@@ -1,67 +1,77 @@
-import React, { FC } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React, { FC, memo, useState } from "react";
 import s from "./Header.module.scss";
+import Logo from "./components/Logo/Logo";
+import Search from "./components/Search/Search";
+import { useSearch } from "../../services/search";
+import Menu from "./components/Menu/Menu";
+import useTopScroll from "../../services/handle-hooks/topScroll";
+import MobileMenu from "./components/MobileMenu/MobileMenu";
+import SearchIcon from "../common/GlobalIcons/SearchIcon";
+import CloseIcon from "../common/GlobalIcons/CloseIcon";
+import MobileSearch from "./components/MobileMenu/components/MobileSearch/MobileSearch";
 
 const Header: FC = () => {
-  const router = useRouter();
-
+  const topScroll = useTopScroll();
+  const [activeSearch, setActiveSearch] = useState<boolean>(false);
+  const {
+    searchRequestValue,
+    setSearchValue,
+    searchValue,
+    focused,
+    setFocused,
+  } = useSearch();
   return (
-    <div className={s.headerContainer}>
-      <Link href={"/"}>
-        <a
-          className={`${s.title} ${router.pathname === "/" ? s.active : null}`}
-        >
-          Home
-        </a>
-      </Link>
-      <Link href={"/about"}>
-        <a
-          className={`${s.title} ${
-            router.pathname === "/about" ? s.active : null
-          }`}
-        >
-          About
-        </a>
-      </Link>
-      <Link href={"/application"}>
-        <a
-          className={`${s.title} ${
-            router.pathname === "/application" ? s.active : null
-          }`}
-        >
-          Application
-        </a>
-      </Link>
-      <Link href={"/learning"}>
-        <a
-          className={`${s.title} ${
-            router.pathname === "/learning" ? s.active : null
-          }`}
-        >
-          Learning
-        </a>
-      </Link>
-      <Link href={"/product"}>
-        <a
-          className={`${s.title} ${
-            router.pathname === "/product" ? s.active : null
-          }`}
-        >
-          Product
-        </a>
-      </Link>
-      <Link href={"/contact"}>
-        <a
-          className={`${s.title} ${
-            router.pathname === "/contact" ? s.active : null
-          }`}
-        >
-          Contact Us
-        </a>
-      </Link>
-    </div>
+    <header
+      style={{
+        background: `rgba(23, 13, 40, ${topScroll && topScroll / 70})`,
+      }}
+    >
+      <div className={`${s.desktopHeader} ${s.headerContainer}`}>
+        <Logo />
+        <Search
+          searchRequestValue={searchRequestValue}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          focused={focused}
+          setFocused={setFocused}
+        />
+        <Menu />
+      </div>
+      <div className={`${s.mobileHeader} ${s.headerContainer}`}>
+        {activeSearch ? (
+          <>
+            <MobileSearch
+              searchRequestValue={searchRequestValue}
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+              focused={focused}
+              setFocused={setFocused}
+            />
+            <CloseIcon
+              height="16"
+              width="16"
+              fill="#B58BBA"
+              onClick={() => {
+                setActiveSearch(false);
+                setSearchValue("");
+              }}
+            />
+          </>
+        ) : (
+          <>
+            <MobileMenu />
+            <Logo />
+            <SearchIcon
+              height="20"
+              width="20"
+              fill="#FFF"
+              onClick={() => setActiveSearch(true)}
+            />
+          </>
+        )}
+      </div>
+    </header>
   );
 };
 
-export default Header;
+export default memo(Header);

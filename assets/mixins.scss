@@ -1,0 +1,101 @@
+// Font Size to rem
+@use "sass:math";
+@mixin fontRem($size, $weight: 400) {
+  font-size: math.div($size, 16) + rem;
+  font-weight: $weight;
+}
+
+@mixin textShorten($numLines: 1) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @supports (-webkit-line-clamp: $numLines) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: $numLines;
+    -webkit-box-orient: vertical;
+  }
+}
+// text shortign end
+
+// flex with childs
+@mixin flexRow($distance, $count: 1, $align: stretch) {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: $align;
+  margin-left: -$distance + px;
+  margin-right: -$distance + px;
+  > [class*="col_"] {
+    flex: 0 0 math.div(100%, $count);
+    max-width: math.div(100%, $count);
+    padding-left: $distance + px;
+    padding-right: $distance + px;
+  }
+}
+// flex with childs
+
+// Flex center
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// absolute positing
+@mixin absoluteCenter($position) {
+  position: absolute;
+  @if $position == "vertical" {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else if $position == "horizontal" {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  } @else if $position == "both" {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+// absolute positing end
+// Button Nulled
+@mixin buttonNulled {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+// Button Nulled end
+// Border Arrow
+@mixin arrow($direction: down, $size: 5px, $color: #555) {
+  width: 0;
+  height: 0;
+  @if ($direction == left) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == right) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if ($direction == down) {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  }
+}
+// Border Arrow end

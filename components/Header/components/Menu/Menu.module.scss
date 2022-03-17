@@ -1,0 +1,36 @@
+.menuContainer {
+  position: relative;
+  display: flex;
+
+  .block {
+    color: #fff;
+    position: relative;
+    font-weight: 800;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    svg {
+      margin-left: 4px;
+    }
+  }
+
+  .active {
+    color: #17092E;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .menuContainer {
+    .block {
+      padding: 8px 8px;
+    }
+  }
+}
+
+
+

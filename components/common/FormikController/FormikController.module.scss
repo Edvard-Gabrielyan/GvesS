@@ -1,0 +1,88 @@
+.controller {
+  margin-bottom: 24px;
+
+  .head {
+    display: flex;
+    align-items: center;
+    color: #A67FA8;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .block {
+    background: rgba(166, 127, 168, 0.34);
+    border-radius: 10px;
+
+    .element {
+      height: 48px;
+      width: 100%;
+      color: #fff;
+      background: transparent;
+      font-size: 15px;
+      border: none;
+      outline: none;
+      appearance: none;
+      padding: 0 24px;
+    }
+
+    .element::placeholder {
+      color: #B58BBA;
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    .textDanger {
+      color: #ff0000;
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+  }
+
+  .inputBlock {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+    }
+  }
+
+  .selectBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      margin-right: 24px;
+    }
+  }
+}
+
+/*@media only screen and (max-width: 860px) {*/
+/*  .controller {*/
+/*    margin-bottom: 16px;*/
+/*  }*/
+/*  */
+/*  .element {*/
+/*    font-size: 13px;*/
+/*  }*/
+/*  */
+/*  .element::placeholder {*/
+/*    font-size: 13px;*/
+/*  }*/
+/*  */
+/*  .head {*/
+/*    margin: 0 16px 16px 16px;*/
+/*  }*/
+/*  */
+/*  .block {*/
+/*    margin: 0 16px;*/
+/*  }*/
+/*  .textDanger {*/
+/*    margin-left: 16px;*/
+/*  }*/
+/*}*/
