@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 import s from "./Radio.module.css";
-import { IPropsFormikController } from "../../FormikController";
+import { IPropsFormikController } from "../../../../../services/handle-hooks/formikController";
 
 interface IProps {
   props: IPropsFormikController;

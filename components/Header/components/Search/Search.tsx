@@ -29,14 +29,14 @@ const Search: FC<IPropsHeader> = ({
         onBlur={() => setFocused(false)}
       />
       {searchValue ? (
-        <div
-          className={s.close}
+        <CloseIcon
+          height="14"
+          width="14"
+          fill="#B58BBA"
           onClick={() => {
             setSearchValue("");
           }}
-        >
-          <CloseIcon height="14" width="14" fill="#B58BBA" />
-        </div>
+        />
       ) : (
         <SearchIcon height="18" width="18" fill="#B58BBA" />
       )}

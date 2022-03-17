@@ -9,19 +9,13 @@ const LearnMore: FC<IProps> = ({ mobileMenu }) => {
   return (
     <div className={`${mobileMenu ? s.dropdownMobileMenu : s.container}`}>
       <Link href={"https://docs.kadena.io/"}>
-        <a className={s.row} target="_blank">
-          Kadena Docs
-        </a>
+        <a className={s.row}>Learn Docs</a>
       </Link>
       <Link href={"https://pactlang.org/"}>
-        <a className={s.row} target="_blank">
-          Pact Smart Contract Tutorials
-        </a>
+        <a className={s.row}>Learn Tutorials</a>
       </Link>
       <Link href={"https://docs.kadena.io/whitepapers/overview"}>
-        <a className={s.row} target="_blank">
-          Kadena Whitepapers
-        </a>
+        <a className={s.row}>Kadena Whitepapers</a>
       </Link>
     </div>
   );

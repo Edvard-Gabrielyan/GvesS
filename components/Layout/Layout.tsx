@@ -26,6 +26,7 @@ export default function Layout({ children, title = "GvesS" }: any) {
       <Header />
       <main>{children}</main>
       <Footer />
+      <div className="bgForIphoneScroll" />
     </div>
   );
 }

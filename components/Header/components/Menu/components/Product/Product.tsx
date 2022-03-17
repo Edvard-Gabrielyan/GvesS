@@ -9,19 +9,13 @@ const Product: FC<IProps> = ({ mobileMenu }) => {
   return (
     <div className={`${mobileMenu ? s.dropdownMobileMenu : s.container}`}>
       <Link href={"https://docs.kadena.io/"}>
-        <a className={s.row} target="_blank">
-          Product
-        </a>
+        <a className={s.row}>Product</a>
       </Link>
       <Link href={"https://pactlang.org/"}>
-        <a className={s.row} target="_blank">
-          Product Tutorials
-        </a>
+        <a className={s.row}>Product Tutorials</a>
       </Link>
       <Link href={"https://docs.kadena.io/whitepapers/overview"}>
-        <a className={s.row} target="_blank">
-          Product For You
-        </a>
+        <a className={s.row}>Product For You</a>
       </Link>
     </div>
   );

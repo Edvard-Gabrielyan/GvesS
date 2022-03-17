@@ -21,7 +21,7 @@ input, select, button {
   font-family: inherit;
 }
 
-.global-section {
+.global-section:not(:first-child) {
   margin-top: 16px;
 }
 
@@ -31,6 +31,21 @@ input, select, button {
   padding: 32px;
   margin: 0 auto;
   background: blue;
+}
+
+.bgForIphoneScroll {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(128.04deg, #26143B 6.75%, #170D28 75.05%);
+}
+
+.disclaimer {
+  display: none;
 }
 
 @media only screen and (max-width: 860px) {
