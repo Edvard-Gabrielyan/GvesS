@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./ContactInfo.module.scss";
-import Mail from "../icons/Mail";
+import Email from "../icons/Email";
 import Location from "../icons/Location";
 import Phone from "../icons/Phone";
 
@@ -20,8 +20,8 @@ const ContactInfo = () => {
     },
     {
       id: 3,
-      Component: <Mail />,
-      title: "Mail",
+      Component: <Email />,
+      title: "Email",
       text: "Gabrielyanedvard@gmail.com",
     },
   ];

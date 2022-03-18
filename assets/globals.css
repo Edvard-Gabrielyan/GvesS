@@ -13,7 +13,7 @@ html, body {
   height: 100%;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 

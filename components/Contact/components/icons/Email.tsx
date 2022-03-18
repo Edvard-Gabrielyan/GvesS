@@ -1,6 +1,6 @@
 import React from "react";
 
-const Mail = () => {
+const Email = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +15,4 @@ const Mail = () => {
   );
 };
 
-export default Mail;
+export default Email;

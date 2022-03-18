@@ -27,6 +27,7 @@ export interface IPropsFormikController {
   name?: string;
   type?: string;
   id?: string | undefined;
+  touched?: any;
   placeholder?: string;
   value: string | number;
   label?: string;
@@ -39,7 +40,8 @@ export interface IPropsFormikController {
 }
 
 const useFormikController = (props: IPropsFormikController) => {
-  const { control, head, data, children, error, id, label, ...rest } = props;
+  const { control, head, data, children, error, id, label, touched, ...rest } =
+    props;
   const [type, setType] = useState<string>("");
   useEffect(() => {
     setType(control);
@@ -49,7 +51,7 @@ const useFormikController = (props: IPropsFormikController) => {
     () => ({
       input: {
         Component: Input,
-        props: { head, children, error, ...rest },
+        props: { head, children, error, touched, ...rest },
       },
       select: {
         Component: Select,

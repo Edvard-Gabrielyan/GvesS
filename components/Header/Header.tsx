@@ -22,6 +22,7 @@ const Header: FC = () => {
   } = useSearch();
   return (
     <header
+      className={s.header}
       style={{
         background: `rgba(23, 13, 40, ${topScroll && topScroll / 70})`,
       }}

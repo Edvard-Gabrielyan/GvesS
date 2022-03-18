@@ -6,16 +6,17 @@ const Input: FC<IPropsFormikController> = ({
   head,
   children,
   error,
+  touched,
   ...rest
 }) => {
   return (
     <>
       <div className={`${s.block} ${s.inputBlock}`}>
         {children ? <span className={s.icon}>{children}</span> : null}
-        <input {...rest} className={s.element} required />
+        <input {...rest} className={s.element} required autoComplete="off" />
         <span className={s.span}>{head}</span>
       </div>
-      {error && <div className={s.textDanger}>{error}</div>}
+      {touched && error && <div className={s.textDanger}>{error}</div>}
     </>
   );
 };

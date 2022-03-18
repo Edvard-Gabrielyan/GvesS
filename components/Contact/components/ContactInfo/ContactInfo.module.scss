@@ -10,6 +10,7 @@
     max-width: 250px;
     display: flex;
     margin-bottom: 16px;
+
     .icon {
       height: 30px;
       width: 30px;
@@ -21,10 +22,12 @@
 
     .info {
       margin-left: 16px;
+
       .title {
         color: #A67FA8;
         font-size: 17px;
       }
+
       .text {
         color: #fff;
         font-size: 13px;
@@ -34,8 +37,22 @@
   }
 }
 
-@media only screen  and (max-width: 860px) {
+@media only screen and (max-width: 860px) {
   .infoContainer {
     align-items: flex-start;
+    margin-bottom: 24px;
+
+    .itemContainer {
+
+      .info {
+        .title {
+          font-size: 13px;
+        }
+
+        .text {
+          font-size: 13px;
+        }
+      }
+    }
   }
 }

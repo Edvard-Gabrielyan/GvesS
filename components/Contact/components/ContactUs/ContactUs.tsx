@@ -16,6 +16,7 @@ const ContactUs = () => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         error={formik.errors.fullName}
+        touched={formik.touched.fullName}
       />
       <FormikController
         control="input"
@@ -26,6 +27,7 @@ const ContactUs = () => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         error={formik.errors.phone}
+        touched={formik.touched.phone}
       />
       <FormikController
         control="input"
@@ -36,6 +38,7 @@ const ContactUs = () => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         error={formik.errors.email}
+        touched={formik.touched.email}
       />
       <FormikController
         control="input"
@@ -46,6 +49,7 @@ const ContactUs = () => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         error={formik.errors.messages}
+        touched={formik.touched.messages}
       />
       <div className={s.submitContainer}>
         <button type="submit" className={s.submit}>
