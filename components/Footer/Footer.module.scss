@@ -1,12 +1,24 @@
+@import '../../assets/mixins.scss';
+
 .footerContainer {
+  @include flex-center;
   height: 64px;
-  width: 100%;
-  max-width: 1440px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #FFF;
   background: #000;
-  padding: 0 32px;
-  margin: 0 auto;
+
+  .sites {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+ .footerContainer {
+   .sites {
+     max-width: 250px;
+   }
+ }
 }
