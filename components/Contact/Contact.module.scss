@@ -1,0 +1,63 @@
+@import '../../assets/mixins.scss';
+
+.contactHeader {
+  color: #FFF;
+  font-size: 40px;
+  @include flex-center();
+}
+
+.headerText {
+  color: #FFF;
+  font-size: 17px;
+  padding: 16px 32px;
+}
+
+.contactContainer {
+  display: flex;
+
+  .aboutForm {
+    flex: 1;
+    margin-bottom: 16px;
+
+    .submitContainer {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .submit {
+        @include buttonNulled();
+        height: 40px;
+        width: 100%;
+        max-width: 200px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 17px;
+        border-radius: 40px;
+        border: 1px solid #FFF;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .aboutForm {
+    .submitContainer {
+      justify-content: center !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .contactHeader {
+    font-size: 25px;
+  }
+
+  .headerText {
+    font-size: 13px;
+    padding: 8px 0;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../../assets/mixins';
+
+.infoContainer {
+  flex: 1;
+  @include flex-center;
+  flex-direction: column;
+
+  .itemContainer {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    margin-bottom: 16px;
+    .icon {
+      height: 30px;
+      width: 30px;
+      background: #fff;
+      @include flex-center;
+      border: 1px solid #000;
+      border-radius: 50%;
+    }
+
+    .info {
+      margin-left: 16px;
+      .title {
+        color: #A67FA8;
+        font-size: 17px;
+      }
+      .text {
+        color: #fff;
+        font-size: 13px;
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+@media only screen  and (max-width: 860px) {
+  .infoContainer {
+    align-items: flex-start;
+  }
+}

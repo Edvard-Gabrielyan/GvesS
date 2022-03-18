@@ -49,7 +49,7 @@ const useFormikController = (props: IPropsFormikController) => {
     () => ({
       input: {
         Component: Input,
-        props: { children, error, ...rest },
+        props: { head, children, error, ...rest },
       },
       select: {
         Component: Select,

@@ -1,16 +1,9 @@
+@import "./assets/mixins.scss";
 .controller {
   margin-bottom: 24px;
 
-  .head {
-    display: flex;
-    align-items: center;
-    color: #A67FA8;
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
-
   .block {
+    position: relative;
     background: rgba(166, 127, 168, 0.34);
     border-radius: 10px;
 
@@ -26,11 +19,27 @@
       padding: 0 24px;
     }
 
+    .span {
+      position: absolute;
+      left: 16px;
+      color: #A67FA8;
+      font-size: 17px;
+      font-weight: 400;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
     .element::placeholder {
       color: #B58BBA;
       font-weight: 400;
       font-size: 15px;
     }
+  }
+
+  .block input:focus ~ span,
+  .block input:valid ~ span {
+    font-size: 13px;
+    transform: translateY(-35px);
   }
 
   .textDanger {
