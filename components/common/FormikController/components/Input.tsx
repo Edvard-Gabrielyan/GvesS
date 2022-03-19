@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 import s from "../FormikController.module.scss";
-import { IPropsFormikController } from "../../../../services/handle-hooks/formikController";
+import { IPropsFormikController } from "../useFormikController";
 
 const Input: FC<IPropsFormikController> = ({
   head,

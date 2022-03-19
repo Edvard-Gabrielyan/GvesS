@@ -6,9 +6,9 @@ import {
   useMemo,
   useState,
 } from "react";
-import Input from "../../components/common/FormikController/components/Input";
-import Select from "../../components/common/FormikController/components/Select";
-import Radio from "../../components/common/FormikController/components/Radio/Radio";
+import Select from "./components/Select";
+import Radio from "./components/Radio/Radio";
+import Input from "./components/Input";
 
 type ComponentInfo = {
   Component: FC<any>;
@@ -23,12 +23,10 @@ interface IFakeSelectData {
 export interface IPropsFormikController {
   control: string;
   head?: string;
-  hint?: string;
   name?: string;
   type?: string;
   id?: string | undefined;
   touched?: any;
-  placeholder?: string;
   value: string | number;
   label?: string;
   checked?: boolean;

@@ -7,7 +7,7 @@
 
   .itemContainer {
     width: 100%;
-    max-width: 250px;
+    max-width: 260px;
     display: flex;
     margin-bottom: 16px;
 
@@ -40,13 +40,16 @@
 @media only screen and (max-width: 860px) {
   .infoContainer {
     align-items: flex-start;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
 
     .itemContainer {
+      .icon {
+        margin-top: 3px;
+      }
 
       .info {
         .title {
-          font-size: 13px;
+          font-size: 15px;
         }
 
         .text {

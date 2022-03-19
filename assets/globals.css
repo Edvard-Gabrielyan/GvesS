@@ -21,10 +21,6 @@ input, select, button {
   font-family: inherit;
 }
 
-.global-section:not(:first-child) {
-  margin-top: 8px;
-}
-
 .container {
   width: 100%;
   max-width: 1440px;

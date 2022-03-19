@@ -1,5 +1,6 @@
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import { useMemo } from "react";
 
 export default function useContact() {
   const phoneRegExp =
@@ -32,5 +33,59 @@ export default function useContact() {
     validateOnChange: false,
   });
 
-  return { formik };
+  const data = useMemo(
+    () => [
+      {
+        id: 1,
+        control: "input",
+        head: "Full name",
+        name: "fullName",
+        type: "text",
+        fullName: formik.values.fullName,
+        handleChange: formik.handleChange,
+        handleBlur: formik.handleBlur,
+        error: formik.errors.fullName,
+        touched: formik.touched.fullName,
+      },
+      {
+        id: 2,
+        control: "input",
+        head: "Phone",
+        name: "phone",
+        type: "text",
+        fullName: formik.values.phone,
+        handleChange: formik.handleChange,
+        handleBlur: formik.handleBlur,
+        error: formik.errors.phone,
+        touched: formik.touched.phone,
+      },
+      {
+        id: 3,
+        control: "input",
+        head: "Email",
+        name: "email",
+        type: "text",
+        fullName: formik.values.email,
+        handleChange: formik.handleChange,
+        handleBlur: formik.handleBlur,
+        error: formik.errors.email,
+        touched: formik.touched.email,
+      },
+      {
+        id: 4,
+        control: "input",
+        head: "Message",
+        name: "messages",
+        type: "text",
+        fullName: formik.values.messages,
+        handleChange: formik.handleChange,
+        handleBlur: formik.handleBlur,
+        error: formik.errors.messages,
+        touched: formik.touched.messages,
+      },
+    ],
+    [formik]
+  );
+
+  return { data, formik };
 }

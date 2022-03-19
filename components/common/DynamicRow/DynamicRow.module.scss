@@ -1,0 +1,58 @@
+@import '../../../assets/mixins.scss';
+
+.rowContainer {
+  width: 100%;
+
+  .block {
+    height: 48px;
+    @include flex-between;
+    color: #B58BBA;
+    background: rgba(166, 127, 168, 0.34);
+    border-radius: 10px;
+    margin-bottom: 16px;
+
+    .element {
+      height: 48px;
+      width: 100%;
+      color: #fff;
+      background: transparent;
+      font-size: 17px;
+      border: none;
+      outline: none;
+      padding: 0 16px;
+    }
+
+    .element::placeholder {
+      color: #A67FA8;
+    }
+
+    .plus {
+      height: 48px;
+      width: 90px;
+      @include flex-center;
+      background: #B58BBA;
+      border-radius: 0 10px 10px 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    .text {
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .rowContainer {
+    .block {
+      .element {
+        font-size: 13px;
+      }
+
+      .plus {
+        width: 60px;
+      }
+    }
+  }
+}

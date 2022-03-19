@@ -1,6 +1,6 @@
 @import "./assets/mixins.scss";
+
 .controller {
-  margin-bottom: 24px;
 
   .block {
     position: relative;
@@ -28,12 +28,6 @@
       pointer-events: none;
       transition: 0.5s;
     }
-
-    .element::placeholder {
-      color: #B58BBA;
-      font-weight: 400;
-      font-size: 15px;
-    }
   }
 
   .block input:focus ~ span,
@@ -45,7 +39,7 @@
   .textDanger {
     color: #ff0000;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 17px;
     margin-top: 4px;
   }
 
@@ -71,27 +65,20 @@
   }
 }
 
-/*@media only screen and (max-width: 860px) {*/
-/*  .controller {*/
-/*    margin-bottom: 16px;*/
-/*  }*/
-/*  */
-/*  .element {*/
-/*    font-size: 13px;*/
-/*  }*/
-/*  */
-/*  .element::placeholder {*/
-/*    font-size: 13px;*/
-/*  }*/
-/*  */
-/*  .head {*/
-/*    margin: 0 16px 16px 16px;*/
-/*  }*/
-/*  */
-/*  .block {*/
-/*    margin: 0 16px;*/
-/*  }*/
-/*  .textDanger {*/
-/*    margin-left: 16px;*/
-/*  }*/
-/*}*/
+.controller:not(:first-child) {
+  margin-top: 24px;
+}
+
+@media only screen and (max-width: 576px) {
+  .controller {
+    .block {
+      .element, .span {
+        font-size: 13px;
+      }
+    }
+
+    .textDanger {
+      font-size: 13px;
+    }
+  }
+}
