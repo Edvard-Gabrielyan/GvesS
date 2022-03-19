@@ -17,7 +17,7 @@ html, body {
   display: none;
 }
 
-input, select, button {
+input, select, button, textarea {
   font-family: inherit;
 }
 

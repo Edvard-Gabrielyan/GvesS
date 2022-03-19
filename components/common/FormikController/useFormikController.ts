@@ -9,6 +9,7 @@ import {
 import Select from "./components/Select";
 import Radio from "./components/Radio/Radio";
 import Input from "./components/Input";
+import TextArea from "./components/TextArea";
 
 type ComponentInfo = {
   Component: FC<any>;
@@ -53,7 +54,11 @@ const useFormikController = (props: IPropsFormikController) => {
       },
       select: {
         Component: Select,
-        props: { data, error, ...rest },
+        props: { head, data, error, ...rest },
+      },
+      textArea: {
+        Component: TextArea,
+        props: { head, control, error, touched, ...rest },
       },
       radio: {
         Component: Radio,

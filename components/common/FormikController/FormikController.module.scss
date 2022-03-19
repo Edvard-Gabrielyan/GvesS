@@ -12,11 +12,11 @@
       width: 100%;
       color: #fff;
       background: transparent;
-      font-size: 15px;
+      font-size: 17px;
       border: none;
       outline: none;
       appearance: none;
-      padding: 0 24px;
+      padding: 0 16px;
     }
 
     .span {
@@ -31,7 +31,11 @@
   }
 
   .block input:focus ~ span,
-  .block input:valid ~ span {
+  .block input:valid ~ span,
+  .block select:focus ~ span,
+  .block select:valid ~ span,
+  .block textarea:focus ~ span,
+  .block textarea:valid ~ span {
     font-size: 13px;
     transform: translateY(-35px);
   }
@@ -51,6 +55,22 @@
       display: flex;
       align-items: center;
       margin-left: 15px;
+    }
+  }
+
+  .textAreaBlock {
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+
+    textarea {
+      height: 100px !important;
+      padding: 16px !important;
+      resize: none;
+    }
+
+    .span {
+      margin-top: 12px;
     }
   }
 
