@@ -2,7 +2,10 @@
 
 .infoContainer {
   flex: 1;
-  @include flex-center;
+  //@include flex-center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
 
   .itemContainer {

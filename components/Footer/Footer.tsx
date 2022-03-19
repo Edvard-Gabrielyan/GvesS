@@ -4,7 +4,7 @@ import Facebook from "./components/icons/Facebook";
 import Youtube from "./components/icons/Youtube";
 import LinkedIn from "./components/icons/LinkedIn";
 import Instagram from "./components/icons/Instagram";
-import Twiter from "./components/icons/Twitter";
+import Twitter from "./components/icons/Twitter";
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
             <Instagram />
             <Youtube />
             <LinkedIn />
-            <Twiter />
+            <Twitter />
           </div>
         </div>
       </section>
