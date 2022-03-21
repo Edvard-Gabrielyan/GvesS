@@ -85,5 +85,5 @@ export default function useContact() {
     [formik]
   );
 
-  return { data, formik };
+  return { data, onSubmit: formik.handleSubmit };
 }

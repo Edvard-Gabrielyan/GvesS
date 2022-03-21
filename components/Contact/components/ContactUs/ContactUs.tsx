@@ -4,9 +4,9 @@ import FormikController from "../../../common/FormikController/FormikController"
 import useContact from "../../../../services/contact";
 
 const ContactUs: FC = () => {
-  const { data, formik } = useContact();
+  const { data, onSubmit } = useContact();
   return (
-    <form className={s.aboutForm} onSubmit={formik.handleSubmit}>
+    <form className={s.aboutForm} onSubmit={onSubmit}>
       {data.map((datum) => (
         <FormikController
           control={datum.control}
