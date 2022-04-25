@@ -1,38 +1,13 @@
 import React, { FC } from "react";
 import Layout from "../components/Layout/Layout";
+import Home from "../components/Home/Home";
 
-const Home: FC = () => {
+const Index: FC = () => {
   return (
     <Layout>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
-      <section className="global-section">
-        <div className="container">Home</div>
-      </section>
+      <Home />
     </Layout>
   );
 };
 
-export default Home;
+export default Index;

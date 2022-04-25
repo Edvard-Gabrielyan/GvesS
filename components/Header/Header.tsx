@@ -1,14 +1,14 @@
 import React, { FC, memo, useState } from "react";
 import s from "./Header.module.scss";
-import Logo from "./components/Logo/Logo";
-import Search from "./components/Search/Search";
+import Logo from "./components/logo/Logo";
+import Search from "./components/search/Search";
 import { useSearch } from "../../services/search";
-import Menu from "./components/Menu/Menu";
+import Menu from "./components/menu/Menu";
 import useTopScroll from "../../services/handle-hooks/topScroll";
-import MobileMenu from "./components/MobileMenu/MobileMenu";
-import SearchIcon from "../common/GlobalIcons/SearchIcon";
-import CloseIcon from "../common/GlobalIcons/CloseIcon";
-import MobileSearch from "./components/MobileMenu/components/MobileSearch/MobileSearch";
+import MobileMenu from "./components/mobile-menu/MobileMenu";
+import SearchIcon from "../common/global-icons/SearchIcon";
+import CloseIcon from "../common/global-icons/CloseIcon";
+import MobileSearch from "./components/mobile-menu/components/mobile-search/MobileSearch";
 
 const Header: FC = () => {
   const topScroll = useTopScroll();

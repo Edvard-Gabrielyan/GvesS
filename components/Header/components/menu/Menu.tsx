@@ -2,8 +2,8 @@ import React, { FC, memo } from "react";
 import Link from "next/link";
 import s from "./Menu.module.scss";
 import { useMenu } from "../../../../services/menu";
-import ArrowIcon from "../../../common/GlobalIcons/ArrowIcon";
-import GlobalDropdown from "../../../common/GlobalDropdown/GlobalDropdown";
+import ArrowIcon from "../../../common/global-icons/ArrowIcon";
+import GlobalDropdown from "../../../common/global-dropdown/GlobalDropdown";
 
 const Menu: FC = () => {
   const { openedTab, setOpenedTab, componentInfo } = useMenu();

@@ -1,21 +1,15 @@
 import React, { FC, memo } from "react";
 import Layout from "../../components/Layout/Layout";
+import Container from "../../components/common/container/Container";
 
 const About: FC = () => {
   return (
     <Layout title="About">
-      <section className="global-section">
-        <div className="container">About</div>
-      </section>
-      <section className="global-section">
-        <div className="container">About</div>
-      </section>
-      <section className="global-section">
-        <div className="container">About</div>
-      </section>
-      <section className="global-section">
-        <div className="container">About</div>
-      </section>
+      <Container>Abouts</Container>
+      <Container>About</Container>
+      <Container>About</Container>
+      <Container>About</Container>
+      <Container>About</Container>
     </Layout>
   );
 };

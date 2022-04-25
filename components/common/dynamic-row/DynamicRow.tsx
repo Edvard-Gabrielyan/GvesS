@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
 import s from "./DynamicRow.module.scss";
-import MinusIcon from "../GlobalIcons/MinusIcon";
-import PlusIcon from "../GlobalIcons/PlusIcon";
+import MinusIcon from "../global-icons/MinusIcon";
+import PlusIcon from "../global-icons/PlusIcon";
 import useDynamicRow from "./useDynamicRow";
 
 const DynamicRow: FC = () => {

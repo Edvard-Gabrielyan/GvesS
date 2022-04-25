@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 import s from "../../Contact.module.scss";
-import FormikController from "../../../common/FormikController/FormikController";
+import FormikController from "../../../common/formik-controller/FormikController";
 import useContact from "../../../../services/contact";
 
 const ContactUs: FC = () => {

@@ -7,7 +7,7 @@ import {
   useState,
 } from "react";
 import Select from "./components/Select";
-import Radio from "./components/Radio/Radio";
+import Radio from "./components/radio/Radio";
 import Input from "./components/Input";
 import TextArea from "./components/TextArea";
 
