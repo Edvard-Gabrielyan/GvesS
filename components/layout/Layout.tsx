@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import Header from "../../view/header/Header";
+import Footer from "../../view/footer/Footer";
 import s from "./Layout.module.scss";
 
 export default function Layout({ children, title = "GvesS" }: any) {
@@ -20,6 +20,16 @@ export default function Layout({ children, title = "GvesS" }: any) {
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100&display=swap"
+          rel="stylesheet"
         />
         <title>{title}</title>
       </Head>

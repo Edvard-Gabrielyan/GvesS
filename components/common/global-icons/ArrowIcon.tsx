@@ -1,13 +1,7 @@
 import React, { FC, memo } from "react";
+import { IPropsIcon } from "./types/type";
 
-export interface IProps {
-  height: string;
-  width: string;
-  fill: string;
-  onClick?: () => void;
-}
-
-const ArrowIcon: FC<IProps> = ({ height, width, fill }) => {
+const ArrowIcon: FC<IPropsIcon> = ({ height, width, fill }) => {
   return (
     <svg
       width={width}

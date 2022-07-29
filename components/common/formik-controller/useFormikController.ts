@@ -1,46 +1,23 @@
-import {
-  ChangeEvent,
-  FC,
-  ReactNode,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { useEffect, useMemo, useState } from "react";
 import Select from "./components/Select";
 import Radio from "./components/radio/Radio";
 import Input from "./components/Input";
 import TextArea from "./components/TextArea";
-
-type ComponentInfo = {
-  Component: FC<any>;
-  props: Record<string, any>;
-};
-
-interface IFakeSelectData {
-  id?: number;
-  value: string;
-}
-
-export interface IPropsFormikController {
-  control: string;
-  head?: string;
-  name?: string;
-  type?: string;
-  id?: string | undefined;
-  touched?: any;
-  value: string | number;
-  label?: string;
-  checked?: boolean;
-  onChange: (e: ChangeEvent) => void;
-  onBlur?: (e: ChangeEvent) => void;
-  error?: ReactNode;
-  data?: IFakeSelectData[] | [];
-  children?: ReactNode;
-}
+import { ComponentInfo, IPropsFormikController } from "./types";
 
 const useFormikController = (props: IPropsFormikController) => {
-  const { control, head, data, children, error, id, label, touched, ...rest } =
-    props;
+  const {
+    control,
+    head,
+    data,
+    children,
+    error,
+    id,
+    label,
+    touched,
+    style,
+    ...rest
+  } = props;
   const [type, setType] = useState<string>("");
   useEffect(() => {
     setType(control);
@@ -50,19 +27,19 @@ const useFormikController = (props: IPropsFormikController) => {
     () => ({
       input: {
         Component: Input,
-        props: { head, children, error, touched, ...rest },
+        props: { head, children, error, touched, style, ...rest },
       },
       select: {
         Component: Select,
-        props: { head, data, error, ...rest },
+        props: { head, data, error, style, ...rest },
       },
       textArea: {
         Component: TextArea,
-        props: { head, control, error, touched, ...rest },
+        props: { head, control, error, touched, style, ...rest },
       },
       radio: {
         Component: Radio,
-        props: { id, control, label, ...rest },
+        props: { id, control, label, style, ...rest },
       },
     }),
     [type, props]

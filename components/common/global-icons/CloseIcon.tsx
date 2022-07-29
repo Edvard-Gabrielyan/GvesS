@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { IProps } from "./ArrowIcon";
+import { IPropsIcon } from "./types/type";
 
-const CloseIcon: FC<IProps> = ({ height, width, fill, onClick }) => {
+const CloseIcon: FC<IPropsIcon> = ({ height, width, fill, onClick }) => {
   return (
     <div className="icon" onClick={onClick}>
       <svg
