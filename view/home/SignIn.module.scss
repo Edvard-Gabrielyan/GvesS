@@ -1,0 +1,57 @@
+@import '../../assets/mixins';
+
+.sign_in_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    height: 350px;
+    width: 100%;
+    position: relative;
+  }
+
+  .sign_in_body {
+    width: 320px;
+    display: flex;
+    padding: 0 16px;
+
+    form {
+      width: 100%;
+    }
+
+    .submitContainer {
+      width: 100%;
+      @include flex-center();
+      padding: 24px 0;
+
+      .submit {
+        @include buttonNulled();
+        height: 40px;
+        width: 100%;
+        color: #000;
+        background: blue;
+        font-weight: 700;
+        font-size: 17px;
+        border-radius: 40px;
+        border: 1px solid #fff;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .sign_in_container {
+    align-items: flex-end;
+
+    .sign_in_body {
+      width: 100%;
+    }
+  }
+}

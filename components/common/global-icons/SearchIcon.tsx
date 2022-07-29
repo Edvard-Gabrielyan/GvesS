@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
-import { IProps } from "./ArrowIcon";
+import { IPropsIcon } from "./types/type";
 
-const SearchIcon: FC<IProps> = ({ height, width, fill, onClick }) => {
+const SearchIcon: FC<IPropsIcon> = ({ height, width, fill, onClick }) => {
   return (
     <div onClick={onClick} className="icon">
       <svg

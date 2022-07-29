@@ -1,7 +1,7 @@
 import { FC, useMemo, useState } from "react";
-import GetStarted from "../components/Header/components/menu/components/get-started/GetStarted";
-import LearnMore from "../components/Header/components/menu/components/learn-more/LearnMore";
-import Product from "../components/Header/components/menu/components/product/Product";
+import GetStarted from "../view/header/components/menu/components/get-started/GetStarted";
+import LearnMore from "../view/header/components/menu/components/learn-more/LearnMore";
+import Product from "../view/header/components/menu/components/product/Product";
 import About from "../pages/about";
 import Contact from "../pages/contact";
 

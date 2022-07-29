@@ -1,8 +1,8 @@
 import React, { FC, memo } from "react";
-import Layout from "../../components/Layout/Layout";
-import ContactUs from "../../components/Contact/components/contact-us/ContactUs";
-import s from "../../components/Contact/Contact.module.scss";
-import ContactInfo from "../../components/Contact/components/contact-info/ContactInfo";
+import Layout from "../../components/layout/Layout";
+import ContactUs from "../../view/contact/components/contact-us/ContactUs";
+import s from "../../view/contact/Contact.module.scss";
+import ContactInfo from "../../view/contact/components/contact-info/ContactInfo";
 import Container from "../../components/common/container/Container";
 
 const Contact: FC = () => {

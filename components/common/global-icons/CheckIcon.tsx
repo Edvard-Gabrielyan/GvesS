@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { IProps } from "./ArrowIcon";
+import { IPropsIcon } from "./types/type";
 
-const CheckIcon: FC<IProps> = ({ height, width, fill }) => {
+const CheckIcon: FC<IPropsIcon> = ({ height, width, fill }) => {
   return (
     <svg
       width={width}

@@ -1,9 +1,15 @@
 import React, { FC, memo } from "react";
 import s from "../FormikController.module.scss";
 import ArrowIcon from "../../global-icons/ArrowIcon";
-import { IPropsFormikController } from "../useFormikController";
+import { IPropsFormikController } from "../types";
 
-const Select: FC<IPropsFormikController> = ({ head, data, error, ...rest }) => {
+const Select: FC<IPropsFormikController> = ({
+  head,
+  data,
+  error,
+  style,
+  ...rest
+}) => {
   return (
     <>
       <div className={`${s.block} ${s.selectBlock}`}>

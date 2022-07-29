@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
-import { IProps } from "./ArrowIcon";
+import { IPropsIcon } from "./types/type";
 
-const PlusIcon: FC<IProps> = ({ width, height, fill }) => {
+const PlusIcon: FC<IPropsIcon> = ({ width, height, fill }) => {
   return (
     <svg
       width={width}

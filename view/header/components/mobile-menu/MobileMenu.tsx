@@ -4,7 +4,7 @@ import s from "./MobileMenu.module.scss";
 import GetStarted from "../menu/components/get-started/GetStarted";
 import LearnMore from "../menu/components/learn-more/LearnMore";
 import Product from "../menu/components/product/Product";
-import GlobalDropdown from "../../../common/global-dropdown/GlobalDropdown";
+import GlobalDropdown from "../../../../components/common/global-dropdown/GlobalDropdown";
 
 const MobileMenu = () => {
   const [visibleMobileItem, setVisibleMobileItem] = useState<boolean | string>(
@@ -137,7 +137,7 @@ const MobileMenu = () => {
     //         </a>
     //         <Link href={"/contact"}>
     //           <a href={"/contact"} className={s.item}>
-    //             Contact
+    //             contact
     //           </a>
     //         </Link>
     //       </div>

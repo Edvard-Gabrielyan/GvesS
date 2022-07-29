@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, memo } from "react";
 import s from "./Search.module.scss";
-import SearchIcon from "../../../common/global-icons/SearchIcon";
-import CloseIcon from "../../../common/global-icons/CloseIcon";
+import SearchIcon from "../../../../components/common/global-icons/SearchIcon";
+import CloseIcon from "../../../../components/common/global-icons/CloseIcon";
 
 export interface IPropsHeader {
   searchRequestValue: (e: ChangeEvent<HTMLInputElement>) => void;

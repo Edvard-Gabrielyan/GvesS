@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
 import s from "../../../search/Search.module.scss";
 import { IPropsHeader } from "../../../search/Search";
-import SearchIcon from "../../../../../common/global-icons/SearchIcon";
+import SearchIcon from "../../../../../../components/common/global-icons/SearchIcon";
 
 const MobileSearch: FC<IPropsHeader> = ({
   searchValue,
