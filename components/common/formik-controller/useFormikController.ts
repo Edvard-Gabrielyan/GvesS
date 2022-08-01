@@ -3,7 +3,7 @@ import Select from "./components/Select";
 import Radio from "./components/radio/Radio";
 import Input from "./components/Input";
 import TextArea from "./components/TextArea";
-import { ComponentInfo, IPropsFormikController } from "./types";
+import { ComponentInfo, IPropsFormikController } from "../types/type";
 
 const useFormikController = (props: IPropsFormikController) => {
   const {

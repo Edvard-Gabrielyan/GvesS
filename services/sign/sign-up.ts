@@ -2,10 +2,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useMemo } from "react";
 
-const useSignIn = () => {
+const useSignUp = () => {
   const formik = useFormik({
     initialValues: {
-      login: "",
+      username: "",
+      email: "",
       password: "",
     },
     enableReinitialize: true,
@@ -15,11 +16,12 @@ const useSignIn = () => {
     validateOnBlur: true,
     validateOnChange: false,
     validationSchema: Yup.object({
-      login: Yup.string()
+      username: Yup.string()
         .max(20, "Must be 20 characters or less")
-        .required("Required Enter your login"),
+        .required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
       password: Yup.string()
-        .required("Please Enter your password")
+        .required("Required")
         .matches(
           /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/,
           "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number"
@@ -32,18 +34,31 @@ const useSignIn = () => {
       {
         id: 1,
         control: "input",
-        head: "Login",
-        name: "login",
+        head: "Username",
+        name: "username",
         type: "text",
-        style: "login",
-        fullName: formik.values.login,
+        style: "username",
+        fullName: formik.values.username,
         handleChange: formik.handleChange,
         handleBlur: formik.handleBlur,
-        error: formik.errors.login,
-        touched: formik.touched.login,
+        error: formik.errors.username,
+        touched: formik.touched.username,
       },
       {
         id: 2,
+        control: "input",
+        head: "Email",
+        name: "email",
+        type: "text",
+        style: "email",
+        fullName: formik.values.email,
+        handleChange: formik.handleChange,
+        handleBlur: formik.handleBlur,
+        error: formik.errors.email,
+        touched: formik.touched.email,
+      },
+      {
+        id: 3,
         control: "input",
         head: "Password",
         name: "password",
@@ -62,4 +77,4 @@ const useSignIn = () => {
   return { data, onSubmit: formik.handleSubmit };
 };
 
-export default useSignIn;
+export default useSignUp;

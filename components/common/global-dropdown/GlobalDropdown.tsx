@@ -1,12 +1,11 @@
-import React, { FC, useEffect, memo, ReactNode } from "react";
+import React, { FC, useEffect, memo } from "react";
 import s from "./GlobalDropdown.module.css";
+import { IGlobalDropdownProps } from "../types/type";
 
-interface IProps {
-  children: ReactNode;
-  setOpenedTab: (bool: string) => void;
-}
-
-const GlobalDropdown: FC<IProps> = ({ children, setOpenedTab }) => {
+const GlobalDropdown: FC<IGlobalDropdownProps> = ({
+  children,
+  setOpenedTab,
+}) => {
   useEffect(() => {
     window.addEventListener("click", () => {
       setOpenedTab("");

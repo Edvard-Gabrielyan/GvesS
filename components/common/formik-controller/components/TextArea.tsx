@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 import s from "../FormikController.module.scss";
-import { IPropsFormikController } from "../types";
+import { IPropsFormikController } from "../../types/type";
 
 const TextArea: FC<IPropsFormikController> = ({
   head,

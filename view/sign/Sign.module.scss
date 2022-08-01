@@ -1,0 +1,76 @@
+@import '../../assets/mixins';
+
+.sign_container {
+  min-height: calc(100vh - 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    height: 350px;
+    width: 100%;
+    position: relative;
+  }
+
+  .rout {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0 24px 0;
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .sign_body {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+
+    .sign_form {
+      width: 100%;
+    }
+
+    .submit_container {
+      width: 100%;
+      @include flex-center();
+      padding: 24px 0;
+
+      .submit {
+        @include buttonNulled();
+        height: 40px;
+        width: 100%;
+        color: #fff;
+        background: #376ADA;
+        font-weight: 700;
+        font-size: 22px;
+        border-radius: 40px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .sign_container {
+    .logo {
+      height: 300px;
+    }
+
+    .sign_body {
+      .submit_container {
+        padding: 16px 0;
+
+        .submit {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}

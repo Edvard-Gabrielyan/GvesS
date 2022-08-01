@@ -1,4 +1,8 @@
-import { ChangeEvent, FC, ReactNode } from "react";
+import React, { ChangeEvent, FC, ReactNode } from "react";
+
+export interface IContainerProps {
+  children: string | React.ReactNode;
+}
 
 export type ComponentInfo = {
   Component: FC<any>;
@@ -26,4 +30,16 @@ export interface IPropsFormikController {
   error?: ReactNode;
   data?: IFakeSelectData[] | [];
   children?: ReactNode;
+}
+
+export interface IGlobalDropdownProps {
+  children: ReactNode;
+  setOpenedTab: (bool: string) => void;
+}
+
+export interface IPropsIcon {
+  height: string;
+  width: string;
+  fill: string;
+  onClick?: () => void;
 }
