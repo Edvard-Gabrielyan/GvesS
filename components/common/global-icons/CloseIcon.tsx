@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { IPropsIcon } from "./types/type";
+import { IPropsIcon } from "../types/type";
 
 const CloseIcon: FC<IPropsIcon> = ({ height, width, fill, onClick }) => {
   return (

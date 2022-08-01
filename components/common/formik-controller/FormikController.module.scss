@@ -4,13 +4,12 @@
 
   .block {
     position: relative;
-    background: rgba(166, 127, 168, 0.34);
+    background: #DEEDFF;
     border-radius: 10px;
 
     .element {
       height: 48px;
       width: 100%;
-      color: #fff;
       background: transparent;
       font-size: 17px;
       border: none;
@@ -22,7 +21,7 @@
     .span {
       position: absolute;
       left: 16px;
-      color: #A67FA8;
+      color: #000;
       font-size: 17px;
       font-weight: 400;
       pointer-events: none;

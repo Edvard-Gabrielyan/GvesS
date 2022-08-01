@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react";
-import { IPropsIcon } from "./types/type";
+import { IPropsIcon } from "../types/type";
 
 const ArrowIcon: FC<IPropsIcon> = ({ height, width, fill }) => {
   return (

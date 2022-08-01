@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react";
-import { IPropsIcon } from "./types/type";
+import { IPropsIcon } from "../types/type";
 
 const SearchIcon: FC<IPropsIcon> = ({ height, width, fill, onClick }) => {
   return (

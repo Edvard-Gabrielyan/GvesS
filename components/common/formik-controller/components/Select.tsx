@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
 import s from "../FormikController.module.scss";
 import ArrowIcon from "../../global-icons/ArrowIcon";
-import { IPropsFormikController } from "../types";
+import { IPropsFormikController } from "../../types/type";
 
 const Select: FC<IPropsFormikController> = ({
   head,

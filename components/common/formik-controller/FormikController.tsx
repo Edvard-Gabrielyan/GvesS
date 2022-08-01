@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
 import s from "./FormikController.module.scss";
 import useFormikController from "./useFormikController";
-import { IPropsFormikController } from "./types";
+import { IPropsFormikController } from "../types/type";
 
 const FormikController: FC<IPropsFormikController> = (props) => {
   const { type, componentInfo } = useFormikController(props);

@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import Home from "../view/home/Home";
+import Sign from "../../view/sign/Sign";
 
 const Index: FC = () => {
-  return <Home />;
+  return <Sign />;
 };
 
 export default Index;

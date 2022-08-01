@@ -24,7 +24,7 @@ input, select, button, textarea {
 .container {
   width: 100%;
   max-width: 1440px;
-  padding: 0 32px;
+  padding: 16px 32px;
   margin: 0 auto;
 }
 
@@ -45,6 +45,6 @@ input, select, button, textarea {
 
 @media only screen and (max-width: 860px) {
   .container {
-    padding: 0;
+    padding: 0 16px;
   }
 }
